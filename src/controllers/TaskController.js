@@ -2,9 +2,9 @@ import { taskUseCases } from "../useCases/TaskUseCases";
 
 class TaskController {
     async index(req, res) {
-        const userId = req.params.userId;
+        const workspaceId = req.params.workspaceId;
 
-        const result = await taskUseCases.index(userId);
+        const result = await taskUseCases.index(workspaceId);
 
         return res.status(200).json(result);
     }

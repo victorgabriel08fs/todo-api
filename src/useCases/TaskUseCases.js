@@ -1,16 +1,16 @@
 import { prisma } from "../prisma/client";
 
 class TaskUseCases {
-    async index(userId) {
+    async index(workspaceId) {
         const tasks = await prisma.task.findMany({
             where: {
-                userId
+                workspaceId
             },
             orderBy: {
                 done: 'asc'
             },
             include: {
-                user: true
+                workspace: true
             }
         });
 
