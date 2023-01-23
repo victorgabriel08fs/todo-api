@@ -2,7 +2,7 @@ import { workspaceUseCases } from "../useCases/WorkspaceUseCases";
 
 class WorkspaceController {
     async index(req, res) {
-        const userId = req.params.id;
+        const userId = req.params.userId;
 
         const result = await workspaceUseCases.index(userId);
 

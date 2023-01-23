@@ -5,6 +5,6 @@ const workspaceRoutes = Router();
 
 workspaceRoutes.get("/:userId", workspaceController.index);
 workspaceRoutes.post("/", workspaceController.store);
-workspaceRoutes.get("/:id", workspaceController.delete);
+workspaceRoutes.delete("/:id", workspaceController.delete);
 
 export { workspaceRoutes };
