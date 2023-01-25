@@ -10,9 +10,11 @@ app.use(cors());
 
 app.use("/api", routes);
 
-app.listen(process.env.PORT, () => {
-    console.log("Server runing on port " + process.env.PORT + "...");
+app.listen(5000, () => {
+    console.log("Server runing on port 5000...");
     setInterval(() => {
         handleServices.exec();
-    }, process.env.HANDLE_INTERVAL * 1000);
-})
+    }, 600 * 1000);
+});
+
+module.exports = app;

@@ -4,7 +4,7 @@ generator client {
 
 datasource db {
   provider = "sqlite"
-  url      = env("DATABASE_URL")
+  url      = "file:../database/dev.db"
 }
 
 model User {
@@ -39,6 +39,7 @@ model Workspace {
   id         String   @id @default(uuid())
   name       String
   priority   String   @default("normal")
+  icon       String   @default("normal")
   created_at DateTime @default(now())
   updated_at DateTime @updatedAt
   userId     String?
