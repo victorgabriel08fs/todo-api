@@ -17,10 +17,10 @@ class UserController {
 
     async store(req, res) {
         const data = req.body;
-
+        data.avatar = req.file.filename;
         const result = await userUseCases.store(data);
 
-        return res.status(201).json(result);
+        return res.status(201).json("asdasd");
     }
 
     async destroy(req, res) {

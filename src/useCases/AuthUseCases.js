@@ -16,6 +16,8 @@ class AuthUseCases {
                 email: true,
                 name: true,
                 created_at: true,
+                isAdmin: true,
+                avatar:true
             }
         });
 

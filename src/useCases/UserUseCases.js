@@ -5,7 +5,7 @@ class UserUseCases {
     async index() {
         const users = await prisma.user.findMany({
             select: {
-                id: true, name: true, email: true, workspaces: true
+                id: true, name: true, email: true, workspaces: true, isAdmin: true, avatar:true
             }
 
         });
